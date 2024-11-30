@@ -74,13 +74,13 @@ function playFromServer(server) {
   let videoUrl;
   switch (server) {
     case "server1":
-      videoUrl = `https://vidsrc.xyz/embed/movie/tt${selectedMovie}`;
+      videoUrl = `https://moviesapi.club/movie/${selectedMovie}`;
       break;
     case "server2":
       videoUrl = `https://multiembed.mov/?video_id=${selectedMovie}&tmdb=1`;
       break;
     case "server3":
-      videoUrl = `https://moviesapi.club/movie/${selectedMovie}`;
+      videoUrl = `https://vidsrc.xyz/embed/movie/tt${selectedMovie}`;
       break;
     default:
       status.textContent = "Invalid server selection.";
