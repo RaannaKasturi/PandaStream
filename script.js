@@ -55,7 +55,7 @@ function displayMovies(movies) {
 // Function to play the movie and show server options
 function playMovie(movieId) {
   selectedMovie = movieId; // Store selected movie ID
-  const videoUrl = `https://multiembed.mov/?video_id=${movieId}&tmdb=1`;
+  const videoUrl = `https://moviesapi.club/movie/${movieId}&tmdb=1`;
   player.src = videoUrl;
   status.textContent = `Streaming movie with ID: ${movieId}`;
   moviesList.innerHTML = ""; // Clear the list after selecting
