@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder and Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Movie Finder and Player</h1>
+    <div>
+        <input type="text" id="movieName" placeholder="Enter movie name" />
+        <button onclick="searchMovies()">Search</button>
+    </div>
+    <p id="status">Search for a movie to begin.</p>
+    <div id="movies-list"></div>
+    <div id="movie-container">
+        <iframe id="moviePlayer" src="" allowfullscreen></iframe>
+        <div id="server-options" style="display: none;">
+            <h3>Select a streaming server:</h3>
+            <button id="server1" onclick="playFromServer('server1')">Server 1</button>
+            <button id="server2" onclick="playFromServer('server2')">Server 2</button>
+            <button id="server3" onclick="playFromServer('server3')">Server 3</button>
+        </div>
+    </div>
+    <div>
+        <p>Designed and Developed by <a href="http://nayankasturi.eu.org" target="_blank"
+                rel="noopener noreferrer">Nayan Kasturi (RAANNA)</a></p>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
