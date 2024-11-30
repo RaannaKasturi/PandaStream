@@ -5,13 +5,6 @@ const serverOptions = document.getElementById("server-options");
 
 let selectedMovie = null;
 
-// Fetch the TMDB API key from the backend
-async function fetchApiKey() {
-  const response = await fetch("/getApiKey");
-  const data = await response.json();
-  return data.apiKey;
-}
-
 // Function to search for movies
 async function searchMovies() {
   const movieName = document.getElementById("movieName").value.trim();
@@ -26,7 +19,7 @@ async function searchMovies() {
   serverOptions.style.display = "none"; // Hide server options initially
 
   try {
-    const apiKey = await fetchApiKey();
+    const apiKey = "860e09245ddab1c5d4bfa3fa8b10492c";
     const response = await fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(
         movieName
